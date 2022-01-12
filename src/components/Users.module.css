@@ -1,19 +1,39 @@
 .section {
-  border: solid black 1px;
+  background-color: rgb(106, 154, 31, 0.6);
+  border: solid 15px rgb(106, 154, 31);
   padding: 20px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-bottom: 10px;
   margin-top: 10px;
+  box-shadow: 0 0 20px rgb(106, 154, 31, 0.55);
 }
 
 .area {
-  background-color: grey;
+  background-color: rgb(106, 154, 31) 0.6;
   border-radius: 10px;
+  column-count: 2;
+  column-rule: dotted 1px #333;
+  list-style-type: none;
 }
 
 .item {
   list-style-type: none;
   color: white;
+  border: solid 5px rgb(106, 154, 31);
+  border-radius: 20px;
+  height: auto;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
+
+/* 
+rgb(0, 172, 233) blue
+rgb(212, 63, 63) red
+rgb(106, 154, 31) green
+rgb(246, 246, 232) light
+rgb(64, 64, 64) dark
+*/

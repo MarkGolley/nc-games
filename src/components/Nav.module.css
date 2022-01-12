@@ -1,18 +1,83 @@
 .nav {
-  background-color: rgb(235, 233, 233);
+  background-color: #404040;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  border-top: solid 1px rgb(180, 180, 180);
+  border-top: solid 1px #f6f6e8;
+  border-bottom: solid 1px #f6f6e8;
 }
 .link {
   padding: 10px;
-  color: black;
+  color: #f6f6e8;
   text-decoration: none;
   font-weight: bold;
 }
 .link:hover {
-  color: red;
-  border-bottom: solid 1px red;
+  color: #f6f6e8;
+  border-bottom: solid 1px #f6f6e8;
 }
+
+.linkcat {
+  padding: 10px;
+  color: #f6f6e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+.linkcat:hover {
+  color: #00ace9;
+  border-bottom: solid 1px #00ace9;
+}
+.linkcat:focus {
+  color: #00ace9;
+  border-bottom: solid 1px #00ace9;
+}
+
+.linkrev {
+  padding: 10px;
+  color: #f6f6e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+.linkrev:hover {
+  color: #d43f3f;
+  border-bottom: solid 1px #d43f3f;
+}
+.linkrev:focus {
+  color: #d43f3f;
+  border-bottom: solid 1px #d43f3f;
+}
+
+.linkuse {
+  padding: 10px;
+  color: #f6f6e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.linkuse:hover {
+  color: #6a9a1f;
+  border-bottom: solid 1px #6a9a1f;
+}
+.linkuse:focus {
+  color: #6a9a1f;
+  border-bottom: solid 1px #6a9a1f;
+}
+
+.button {
+  position: absolute;
+  top: 60px;
+  height: 61px;
+  width: 60px;
+  right: 0;
+  background: #f6f6e8;
+  color: #404040;
+}
+
+/* 
+#00ACE9 blue
+#D43F3F red
+#6A9A1F green
+#F6F6E8 light
+#404040 dark
+*/

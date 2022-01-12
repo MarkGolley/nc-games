@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LightMode from "./LightMode";
 import styles from "./Nav.module.css";
 
 const Nav = () => {
@@ -8,15 +9,16 @@ const Nav = () => {
       <Link className={styles.link} to="/">
         HOME
       </Link>
-      <Link className={styles.link} to="/categories">
+      <Link className={styles.linkcat} to="/categories">
         CATEGORIES
       </Link>
-      <Link className={styles.link} to="/reviews">
+      <Link className={styles.linkrev} to="/reviews">
         REVIEWS
       </Link>
-      <Link className={styles.link} to="/users">
+      <Link className={styles.linkuse} to="/users">
         USERS
       </Link>
+      <LightMode />
     </nav>
   );
 };

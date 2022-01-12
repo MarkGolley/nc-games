@@ -1,38 +1,45 @@
 .App {
   text-align: center;
+  font-family: Barlow;
+  color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(64, 64, 64, 0.9);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+h1 {
+  background-color: rgb(64, 64, 64, 0.4);
+  color: #f6f6e8;
+  font-family: "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  line-height: 1;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+h1:hover,
+h1:visited,
+h1:link,
+h1:active {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(64, 64, 64);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* 
+rgb(0, 172, 233) blue
+rgb(212, 63, 63) red
+rgb(106, 154, 31) green
+rgb(246, 246, 232) light
+rgb(64, 64, 64) dark
+*/

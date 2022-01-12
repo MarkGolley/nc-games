@@ -11,7 +11,7 @@ const Home = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchCategories()
+    fetchCategories(3)
       .then((res) => {
         setCategories(res);
         setLoading(false);
@@ -20,7 +20,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    fetchReviews()
+    fetchReviews(3)
       .then((res) => {
         setReviews(res);
         setLoading(false);
@@ -29,7 +29,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    fetchUsers()
+    fetchUsers(3)
       .then((res) => {
         setUsers(res);
         setLoading(false);
@@ -41,54 +41,57 @@ const Home = () => {
 
   return (
     <div className={styles.panes}>
-      <section className={styles.section}>
+      <Link to="/categories" className={styles.categories}>
         <h2>CATEGORIES</h2>
+        <p>
+          Some of the categories that you can choose from are below, click to
+          see more:
+        </p>
         {isLoading ? <p className={styles.loader}></p> : null}
-        <Link to="/categories">
-          <ul className={styles.area}>
-            {categories.map((category) => {
-              return (
-                <li className={styles.item} key={category.category_id}>
-                  {category.category_id}
-                </li>
-              );
-            })}
-            <li className={styles.item}>...</li>
-          </ul>
-        </Link>
-      </section>
-      <section className={styles.section}>
+        <ul className={styles.area}>
+          {categories.map((category) => {
+            return (
+              <li className={styles.item} key={category.category_id}>
+                {category.category_id}
+              </li>
+            );
+          })}
+        </ul>
+      </Link>
+      <Link to="/reviews" className={styles.reviews}>
         <h2>REVIEWS</h2>
+        <p>
+          Some of the reviews that you can view are shown below, click to see
+          more:
+        </p>
         {isLoading ? <p className={styles.loader}></p> : null}
-        <Link to="/reviews">
-          <ul className={styles.area}>
-            {reviews.map((review) => {
-              return (
-                <li className={styles.item} key={review.review_id}>
-                  {review.owner}
-                </li>
-              );
-            })}
-            <li className={styles.item}>...</li>
-          </ul>
-        </Link>
-      </section>
-      <section className={styles.section}>
+        <ul className={styles.area}>
+          {reviews.map((review) => {
+            return (
+              <li className={styles.item} key={review.review_id}>
+                {review.owner}
+              </li>
+            );
+          })}
+        </ul>
+      </Link>
+      <Link to="/users" className={styles.users}>
         <h2>USERS</h2>
+        <p>
+          Some of the users that you can view are shown below, click to see
+          more:
+        </p>
         {isLoading ? <p className={styles.loader}></p> : null}
-        <Link to="/users">
-          <ul className={styles.area}>
-            {users.map((user) => {
-              return (
-                <li className={styles.item} key={user.username}>
-                  {user.username}
-                </li>
-              );
-            })}
-            <li className={styles.item}>...</li>
-          </ul>
-        </Link>
-      </section>
+        <ul className={styles.area}>
+          {users.map((user) => {
+            return (
+              <li className={styles.item} key={user.username}>
+                {user.username}
+              </li>
+            );
+          })}
+        </ul>
+      </Link>
     </div>
   );
 };

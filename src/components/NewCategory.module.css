@@ -1,0 +1,14 @@
+.newcat {
+  background-color: rgb(64, 64, 64);
+  color: rgb(246, 246, 232);
+}
+
+input {
+  width: auto;
+  padding: 2px 12px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

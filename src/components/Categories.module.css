@@ -1,25 +1,28 @@
 .section {
-  border: solid black 1px;
+  background-color: rgb(0, 172, 233, 0.6);
+  border: solid 15px rgb(0, 172, 233);
   padding: 20px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-bottom: 10px;
   margin-top: 10px;
+  box-shadow: 0 0 20px rgb(0, 172, 233, 0.55);
 }
 
 .area {
-  background-color: grey;
+  background-color: rgb(0, 172, 233) 0.6;
   border-radius: 10px;
-  column-count: 2;
+  column-count: 1;
   column-rule: dotted 1px #333;
   list-style-type: none;
 }
 
 .item {
   list-style-type: none;
-  color: white;
-  border: solid black;
+  color: rgb(246, 246, 232);
+  border: solid 5px rgb(0, 172, 233);
+  border-radius: 20px;
   height: 100px;
   text-align: center;
   padding: 10px;
@@ -27,7 +30,22 @@
   margin-bottom: 10px;
 }
 
+h2 {
+  color: rgb(64, 64, 64);
+}
+
 .item h3 {
   font-weight: bold;
   text-transform: capitalize;
+  background-color: rgb(0, 172, 233);
+  color: rgb(246, 246, 232);
+  border-radius: 10px;
 }
+
+/* 
+rgb(0, 172, 233) blue
+rgb(212, 63, 63) red
+rgb(106, 154, 31) green
+rgb(246, 246, 232) light
+rgb(64, 64, 64) dark
+*/

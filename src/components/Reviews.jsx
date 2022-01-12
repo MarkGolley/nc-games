@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { fetchReviews } from "../utils/api";
 import styles from "./Reviews.module.css";
 
@@ -6,6 +7,9 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [isError, setError] = useState(false);
   const [isLoading, setLoading] = useState(true);
+  const { category } = useParams();
+
+  console.log(category);
 
   useEffect(() => {
     fetchReviews()
@@ -25,8 +29,8 @@ const Reviews = () => {
       <ul className={styles.area}>
         {reviews.map((review) => {
           return (
-            <li className={styles.item} key={review.review_id}>
-              {review.owner}
+            <li className={styles.item} key={review.title}>
+              {(review.owner, review.title)}
             </li>
           );
         })}
