@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchUsers } from "../utils/api";
 import styles from "./Users.module.css";
+import { Link } from "react-router-dom";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -25,9 +26,15 @@ const Users = () => {
       <ul className={styles.area}>
         {users.map((user) => {
           return (
-            <li className={styles.item} key={user.username}>
-              {user.name}
-            </li>
+            <Link to={`/users/${user.username}`}>
+              <li className={styles.item} key={user.username}>
+                Name:{user.name}
+                <br />
+                Username: {user.username}
+                <br />
+                <img src={user.avatar_url} alt=""></img>
+              </li>
+            </Link>
           );
         })}
       </ul>

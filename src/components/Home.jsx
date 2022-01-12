@@ -13,6 +13,7 @@ const Home = () => {
   useEffect(() => {
     fetchCategories(3)
       .then((res) => {
+        console.log(res);
         setCategories(res);
         setLoading(false);
       })
@@ -51,8 +52,8 @@ const Home = () => {
         <ul className={styles.area}>
           {categories.map((category) => {
             return (
-              <li className={styles.item} key={category.category_id}>
-                {category.category_id}
+              <li className={styles.item} key={category.slug}>
+                {category.slug}
               </li>
             );
           })}

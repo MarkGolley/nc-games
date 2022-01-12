@@ -6,6 +6,8 @@ import styles from "./Nav.module.css";
 const Nav = () => {
   return (
     <nav className={styles.nav}>
+      <h1>NC-Games</h1>
+
       <Link className={styles.link} to="/">
         HOME
       </Link>

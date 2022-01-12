@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./NewCategory.module.css";
 import { postCategories } from "../utils/api";
 
-const NewCategory = () => {
+const NewCategory = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [category_id, setCategory_id] = useState("");
   const [description, setDescription] = useState("");
@@ -13,7 +13,10 @@ const NewCategory = () => {
     event.preventDefault();
     postCategories(category_id, description)
       .then((res) => {
+        setCategory_id("");
+        setDescription("");
         console.log(res);
+        return <p>{res}</p>;
       })
       .catch((err) => {
         console.log(err);

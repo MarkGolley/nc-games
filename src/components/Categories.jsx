@@ -16,7 +16,7 @@ const Categories = () => {
         setLoading(false);
       })
       .catch((err) => setError(true));
-  }, []);
+  }, [categories]);
 
   if (isError) return <p>Error</p>;
 
@@ -24,14 +24,15 @@ const Categories = () => {
     <div className={styles.section}>
       <h2>CATEGORIES</h2>
       <NewCategory />
+
       <p>Here are the available categories...</p>
       {isLoading ? <p>Loading...</p> : null}
       <ul className={styles.area}>
         {categories.map((category) => {
           return (
-            <Link to={`/reviews/${category.category_id}`}>
-              <li className={styles.item} key={category.category_id}>
-                <h3>{category.category_id.replace(/-/g, " ")}</h3>
+            <Link to={`/reviews/${category.slug}`}>
+              <li className={styles.item} key={category.slug}>
+                <h3>{category.slug.replace(/-/g, " ")}</h3>
                 <p>{category.description}</p>
               </li>
             </Link>

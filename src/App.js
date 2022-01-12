@@ -5,16 +5,12 @@ import Categories from "./components/Categories.jsx";
 import Reviews from "./components/Reviews.jsx";
 import Users from "./components/Users.jsx";
 import Nav from "./components/Nav.jsx";
-import styles from "./App.css";
+import User from "./components/User";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Link to="/">
-          <h1>NC-Games</h1>
-        </Link>
-
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,6 +18,7 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/reviews/:category" element={<Reviews />} />
           <Route path="/users" element={<Users />} />
+          <Route path="/users/:username" element={<User />} />
         </Routes>
       </div>
     </BrowserRouter>
