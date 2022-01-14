@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react/cjs/react.development";
-import { postComment } from "../utils/api";
+import { postComment } from "../../utils/api";
 import styles from "./AddComment.module.css";
 
 const AddComment = ({ review_id, setCommented }) => {

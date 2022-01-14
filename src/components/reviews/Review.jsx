@@ -4,7 +4,7 @@ import { fetchReview } from "../../utils/api";
 import styles from "./Review.module.css";
 import Comments from "../comments/Comments";
 import ReviewVote from "../ReviewVote";
-import AddComment from "../AddComment";
+import AddComment from "../comments/AddComment";
 
 const Review = () => {
   const [review, setReview] = useState({});

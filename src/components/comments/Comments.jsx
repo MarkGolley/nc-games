@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { fetchComments } from "../../utils/api";
-import CommentVote from "../CommentVote";
+import CommentVote from "./CommentVote";
 import styles from "./Comments.module.css";
 
 const Comments = ({ review_id, commented }) => {

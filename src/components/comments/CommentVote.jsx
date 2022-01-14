@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react/cjs/react.development";
-import { updateComment } from "../utils/api";
+import { updateComment } from "../../utils/api";
 
 const CommentVote = ({ currVotes, comment_id, setVoted }) => {
   const [votes, setVotes] = useState(currVotes);

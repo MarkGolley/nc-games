@@ -2,31 +2,34 @@ import React, { useState } from "react";
 import styles from "./Login.module.css";
 
 const Login = ({ username, setUsername }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [user, setUser] = useState("");
 
-  const toggleOpen = () => setIsLoggedIn((currOpen) => !currOpen);
+  const toggleOpen = () => setIsOpen((currOpen) => !currOpen);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event.target.value);
-    setUsername(event.target.value);
-    setIsLoggedIn(true);
+    console.log(user);
+    setUsername(user);
   };
 
   return (
     <div>
       <button className={styles.newCat} onClick={toggleOpen}>
-        {isLoggedIn ? null : "Login"}
+        {isOpen ? "Cancel" : " Login"}
       </button>
 
-      {isLoggedIn ? (
+      {isOpen ? (
         <form onSubmit={handleSubmit}>
           <label>
             Username:
-            <input value={username} />
+            <input
+              value={user}
+              onChange={(event) => setUser(event.target.value)}
+            />
           </label>
 
-          <button type="submit">Submit</button>
+          <button type="submit">Login</button>
         </form>
       ) : null}
     </div>
