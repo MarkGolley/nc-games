@@ -5,14 +5,19 @@ import Categories from "./components/category/Categories";
 import Reviews from "./components/reviews/Reviews.jsx";
 import Review from "./components/reviews/Review";
 import Users from "./components/users/Users.jsx";
-import Nav from "./components/Nav.jsx";
+import Nav from "./components/nav/Nav";
 import User from "./components/users/User";
+import { useState } from "react";
 
 function App() {
+  const [username, setUsername] = useState("");
+  console.log(username);
+
   return (
     <BrowserRouter>
       <div className="App">
-        <Nav />
+        {username ? `${username} is logged in` : null}
+        <Nav username={username} setUsername={setUsername} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/categories" element={<Categories />} />

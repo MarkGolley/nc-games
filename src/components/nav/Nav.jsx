@@ -4,7 +4,7 @@ import LightMode from "./LightMode";
 import Login from "./Login";
 import styles from "./Nav.module.css";
 
-const Nav = () => {
+const Nav = ({ username, setUsername }) => {
   return (
     <nav className={styles.nav}>
       <h1>NC-Games</h1>
@@ -22,7 +22,7 @@ const Nav = () => {
         USERS
       </Link>
       <LightMode />
-      <Login />
+      <Login username={username} setUsername={setUsername} />
     </nav>
   );
 };

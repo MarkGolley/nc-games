@@ -1,0 +1,28 @@
+.newcat {
+  background-color: rgb(64, 64, 64);
+  color: rgb(246, 246, 232);
+}
+
+button {
+  background-color: rgb(64, 64, 64);
+  color: rgb(246, 246, 232);
+}
+label {
+  color: rgb(246, 246, 232);
+  display: block;
+  float: center;
+  width: 10em;
+  margin-right: 1em;
+}
+
+input {
+  background-color: rgb(64, 64, 64);
+  color: rgb(246, 246, 232);
+  width: auto;
+  padding: 2px 12px;
+  margin: 8px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

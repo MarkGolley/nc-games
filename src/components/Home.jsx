@@ -53,6 +53,7 @@ const Home = () => {
             return (
               <li className={styles.item} key={category.slug}>
                 {category.slug}
+                <br />
               </li>
             );
           })}
@@ -70,6 +71,7 @@ const Home = () => {
             return (
               <li className={styles.item} key={review.review_id}>
                 {review.owner}
+                <br />
               </li>
             );
           })}
@@ -87,6 +89,7 @@ const Home = () => {
             return (
               <li className={styles.item} key={user.username}>
                 {user.username}
+                <br />
               </li>
             );
           })}
