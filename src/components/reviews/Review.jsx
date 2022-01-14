@@ -6,7 +6,7 @@ import Comments from "../comments/Comments";
 import ReviewVote from "../ReviewVote";
 import AddComment from "../comments/AddComment";
 
-const Review = () => {
+const Review = ({ username }) => {
   const [review, setReview] = useState({});
   const [isError, setError] = useState(false);
   const [isLoading, setLoading] = useState(true);
@@ -62,7 +62,11 @@ const Review = () => {
         review_id={review.review_id}
         setVoted={setVoted}
       />
-      <AddComment review_id={review.review_id} setCommented={setCommented} />
+      <AddComment
+        username={username}
+        review_id={review.review_id}
+        setCommented={setCommented}
+      />
       <Comments review_id={review_id} commented={commented} />
     </div>
   );
