@@ -1,0 +1,59 @@
+.section {
+  background-color: rgb(212, 63, 63, 0.6);
+  border: solid 15px rgb(212, 63, 63);
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgb(212, 63, 63, 0.55);
+}
+.section h2 {
+  color: rgb(64, 64, 64);
+  font-size: 40px;
+}
+
+.area {
+  background-color: rgb(212, 63, 63) 0.6;
+  border-radius: 10px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.item {
+  color: rgb(246, 246, 232);
+  border: solid 5px rgb(212, 63, 63);
+  border-radius: 20px;
+  height: auto;
+  width: 350px;
+  text-align: center;
+  display: block;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.item h3 {
+  font-weight: bold;
+  text-transform: capitalize;
+  background-color: rgb(212, 63, 63, 0.7);
+  color: rgb(246, 246, 232);
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgb(212, 63, 63);
+}
+
+/* 
+rgb(0, 172, 233) blue
+rgb(212, 63, 63) red
+rgb(106, 154, 31) green
+rgb(246, 246, 232) light
+rgb(64, 64, 64) dark
+*/

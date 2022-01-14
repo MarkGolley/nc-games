@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./NewCategory.module.css";
-import { postCategories } from "../utils/api";
+import { postCategories } from "../../utils/api";
 
 const NewCategory = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Categories.module.css";
-import { fetchCategories } from "../utils/api";
+import { fetchCategories } from "../../utils/api";
 import { Link } from "react-router-dom";
 import NewCategory from "./NewCategory";
 
@@ -30,7 +30,7 @@ const Categories = () => {
       <ul className={styles.area}>
         {categories.map((category) => {
           return (
-            <Link to={`/reviews/${category.slug}`}>
+            <Link to={`/reviews/category/${category.slug}`}>
               <li className={styles.item} key={category.slug}>
                 <h3>{category.slug.replace(/-/g, " ")}</h3>
                 <p>{category.description}</p>

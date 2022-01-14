@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchUsers } from "../utils/api";
+import { fetchUsers } from "../../utils/api";
 import styles from "./Users.module.css";
 import { Link } from "react-router-dom";
 

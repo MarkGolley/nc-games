@@ -1,0 +1,48 @@
+.section {
+  background-color: rgb(212, 63, 63, 0.6);
+  border: solid 15px rgb(212, 63, 63);
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgb(212, 63, 63, 0.55);
+}
+.section h2 {
+  color: rgb(64, 64, 64);
+  font-size: 40px;
+}
+.area {
+  margin: 0;
+  justify-content: left;
+}
+ul {
+  background-color: rgb(212, 63, 63) 0.6;
+  color: rgb(246, 246, 232);
+  list-style-type: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.area img {
+  height: 200px;
+  width: 300px;
+  border-radius: 20px;
+  float: right;
+  margin: 0 0 0 0;
+}
+
+/* 
+rgb(0, 172, 233) blue
+rgb(212, 63, 63) red
+rgb(106, 154, 31) green
+rgb(246, 246, 232) light
+rgb(64, 64, 64) dark
+*/

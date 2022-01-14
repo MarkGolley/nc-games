@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react/cjs/react.development";
-import { fetchUser } from "../utils/api";
+import { fetchUser } from "../../utils/api";
 import styles from "./User.module.css";
 
 const User = () => {
@@ -13,12 +13,11 @@ const User = () => {
   useEffect(() => {
     fetchUser(username)
       .then((res) => {
-        console.log(res);
         setUser(res[0]);
         setLoading(false);
       })
       .catch((err) => setError(true));
-  }, []);
+  }, [username]);
 
   if (isError) return <p>Error</p>;
 

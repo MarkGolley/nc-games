@@ -13,7 +13,6 @@ const Home = () => {
   useEffect(() => {
     fetchCategories(3)
       .then((res) => {
-        console.log(res);
         setCategories(res);
         setLoading(false);
       })

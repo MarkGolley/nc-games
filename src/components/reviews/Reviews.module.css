@@ -32,7 +32,7 @@
   color: rgb(246, 246, 232);
   border: solid 5px rgb(212, 63, 63);
   border-radius: 20px;
-  height: auto;
+  height: 280px;
   width: 350px;
   text-align: center;
   display: block;
@@ -54,8 +54,9 @@
   text-transform: capitalize;
 }
 
-img {
-  float: right;
+.item img {
+  padding-right: 30px;
+
   height: 200px;
   width: 300px;
   border-radius: 20px;

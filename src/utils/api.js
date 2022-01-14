@@ -19,9 +19,23 @@ export const postCategories = (category_id, description) => {
 
 export const fetchReviews = (limit, category_id) => {
   return myApi
-    .get("/reviews", { params: { limit: limit, category: category_id } })
+    .get("/reviews", {
+      params: { limit: limit, category: category_id },
+    })
     .then((res) => {
       return res.data.reviews;
+    });
+};
+export const fetchReview = (review_id) => {
+  return myApi.get(`/reviews/${review_id}`).then((res) => {
+    return res.data.review;
+  });
+};
+export const updateReview = (review_id, inc_votes) => {
+  return myApi
+    .patch(`/reviews/${review_id}`, { inc_votes: inc_votes })
+    .then((res) => {
+      return res.data.review;
     });
 };
 
@@ -31,8 +45,27 @@ export const fetchUsers = (limit) => {
   });
 };
 export const fetchUser = (username) => {
-  console.log(username);
   return myApi.get(`/users/${username}`).then((res) => {
     return res.data.user;
   });
+};
+
+export const fetchComments = (review_id) => {
+  return myApi.get(`/reviews/${review_id}/comments`).then((res) => {
+    return res.data.comments;
+  });
+};
+export const updateComment = (comment_id, inc_votes) => {
+  return myApi
+    .patch(`/comments/${comment_id}`, { inc_votes: inc_votes })
+    .then((res) => {
+      return res.data.comment;
+    });
+};
+export const postComment = (review_id, username, body) => {
+  return myApi
+    .post(`/reviews/${review_id}/comments`, { username: username, body: body })
+    .then((res) => {
+      return res.data.comment;
+    });
 };

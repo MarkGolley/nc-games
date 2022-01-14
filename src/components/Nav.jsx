@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import LightMode from "./LightMode";
+import Login from "./Login";
 import styles from "./Nav.module.css";
 
 const Nav = () => {
@@ -21,6 +22,7 @@ const Nav = () => {
         USERS
       </Link>
       <LightMode />
+      <Login />
     </nav>
   );
 };
