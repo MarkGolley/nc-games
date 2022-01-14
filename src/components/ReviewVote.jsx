@@ -32,7 +32,7 @@ const ReviewVote = ({ currVotes, review_id, setVoted }) => {
 
   return (
     <div>
-      <button onClick={handleClick} disabled={submitted}>
+      <button value={votes} onClick={handleClick} disabled={submitted}>
         VOTE
       </button>
     </div>
